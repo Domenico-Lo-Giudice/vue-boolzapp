@@ -112,10 +112,11 @@
             <div
               class="contact"
               v-for="(contact, index) in contacts"
+              @click="clickedContact = index"
             >
               <div class="user">
                 <img
-                  src="./img/avatar_1.jpg"
+                  :src="`img/avatar${contact.avatar}.jpg`"
                   alt=""
                 />
 
@@ -242,10 +243,10 @@
           <header class="main-header">
             <div class="user">
               <img
-                src="./img/avatar_1.jpg"
+                :src="`img/avatar${contacts[clickedContact].avatar}.jpg`"
                 alt=""
               />
-              <span>Michele</span>
+              <span>{{contacts[clickedContact].name}}</span>
             </div>
 
             <div class="icons">
