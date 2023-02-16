@@ -180,6 +180,16 @@ const app = Vue.createApp({
       });
 
       this.newMessageText = "";
+
+      setTimeout(() => {
+        let reply = {
+          date: "10:27",
+          message: "ok",
+          status: "received",
+        };
+
+        this.contacts[this.clickedContact].messages.push(reply);
+      }, 1000);
     },
   },
 });

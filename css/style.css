@@ -262,3 +262,12 @@ body {
   border-radius: 10px;
   padding-left: 10px;
 }
+
+.contact:hover,
+.emoji:hover,
+.btn:hover,
+.bellIcon:hover,
+.icons > i:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
