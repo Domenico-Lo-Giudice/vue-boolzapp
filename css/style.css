@@ -192,9 +192,7 @@ body {
   flex-direction: column;
 }
 
-.sent {
-  align-self: flex-end;
-  background-color: #d5f9ba;
+.standard-message {
   max-width: 60%;
   min-width: 30%;
   border-radius: 10px;
@@ -204,7 +202,13 @@ body {
   position: relative;
 }
 
-.msgAnswer {
+.sent {
+  align-self: flex-end;
+  background-color: #d5f9ba;
+}
+
+.msgAnswer,
+.received {
   background-color: white;
   max-width: 60%;
   min-width: 30%;
@@ -217,7 +221,7 @@ body {
   position: relative;
 }
 
-.main-talk > .sent > span {
+.received > span {
   position: absolute;
   bottom: 2px;
   right: 5px;
@@ -225,11 +229,11 @@ body {
   color: grey;
 }
 
-.main-talk > .msgAnswer > span {
+.main-talk > .sent > span {
   position: absolute;
-  bottom: 2px;
+  bottom: 0.5px;
   right: 5px;
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: grey;
 }
 

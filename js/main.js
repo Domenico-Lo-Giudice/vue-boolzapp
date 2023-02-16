@@ -167,7 +167,20 @@ const app = Vue.createApp({
           ],
         },
       ],
+      newMessageText: "",
     };
+  },
+
+  methods: {
+    sendMessage() {
+      this.contacts[this.clickedContact].messages.push({
+        date: "10/01/2020 15:51:00",
+        message: this.newMessageText,
+        status: "sent",
+      });
+
+      this.newMessageText = "";
+    },
   },
 });
 

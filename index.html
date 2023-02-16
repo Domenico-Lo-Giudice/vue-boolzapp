@@ -259,21 +259,27 @@
 
           <!-- MAIN TALK -->
           <main class="main-talk">
-            <div class="sent">
+            <!-- <div class="sent">
               Hai portato a spasso il cane?
               <span> 15:30 </span>
-            </div>
+            </div> -->
 
-            <div class="sent">
+            <!-- <div class="sent">
               Ricordati di stendere i panni
               <span> 15:50 </span>
-            </div>
+            </div> -->
 
-            <div class="msgAnswer">
-              Tutto fatto!
-              <span> 16:15 </span>
+            <div
+              class="standard-message"
+              v-for="message in contacts[clickedContact].messages"
+              :class="message.status"
+            >
+              {{ message.message }}
+
+              <span> {{ message.date }} </span>
             </div>
           </main>
+
           <!-- MAIN TALK -->
 
           <!-- MAIN FOOTER -->
@@ -283,7 +289,16 @@
             </div>
 
             <div class="text">
+              <!-- <input
+                class="message"
+                type="text"
+                name=""
+                id=""
+                placeholder="Scrivi un messaggio..."
+              /> -->
               <input
+                @keyup.enter="sendMessage"
+                v-model="newMessageText"
                 class="message"
                 type="text"
                 name=""
